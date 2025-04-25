@@ -1,0 +1,1216 @@
+*{
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.logo{
+    width: 300px;
+    height: 150px;
+}
+
+textarea{
+    height: 200px;
+}
+
+                                                    /*Cabeçário*/
+
+header{
+    width: 100%;
+    top: 0px; !important;
+}
+
+/* From Uiverse.io by Ali-Tahmazi99 */
+/* From uiverse.io by @Ali-Tahmazi99 */
+.btn-pesquisar {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+
+.btn-pesquisar::before,
+.btn-pesquisar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.btn-pesquisar::before {
+    left: -10px;
+    background: #240046;
+}
+
+.btn-pesquisar::after {
+    right: -10px;
+    background: #5a189a;
+}
+
+.btn-pesquisar:hover::before,
+.btn-pesquisar:hover::after {
+    width: 58%;
+}
+
+.btn-pesquisar:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+}
+
+.btn-pesquisar span{
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+.menus ul li a{
+    font-size: 20px;
+}
+
+                                                                /*Barra Pesquisa*/
+
+.offcanvas-body{
+    gap: 50px;
+    flex-direction: column;
+}
+
+.form-select{
+    width: 300px;
+}
+
+.select{
+    flex-direction: column;
+}
+
+.offcanvas{
+    width: 1000px;
+}
+
+.offcanvas p{
+    font-size: 20px;
+}
+
+.offcanvas option{
+    font-size: 20px;
+}
+
+                                                                /*Banners*/
+
+.carousel-item img{
+    width: 100%;
+    height: 620px;
+}
+
+
+                                                    /*Sobre*/
+
+.TituloSobre h1{
+    margin: 70px;
+    font-size: 50px;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+
+.bi-file-earmark-person-fill{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.bi-eye-fill{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.bi-person-fill-gear{
+    margin-left: 50px;
+}
+
+.sobreTextos{
+    width: 420px;
+    margin-top: 50px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sobreTextos p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.sobreTextos button{
+    font-size: 20px;
+}
+
+.sobre{
+    flex-direction: column;
+}
+
+.card-box-ico{
+    border: 5px solid #72e166;
+    width: 150px;
+    height: 100px;
+}
+
+.title-c{
+    margin-left: 120px;
+}
+
+.card-title-c{
+    width: 100px;
+    font-size: 30px;
+}
+
+                                                    /*Equipe*/
+
+.NossaEquipe{
+    margin-top: 100px;
+    background: #d1cece;
+    padding: 50px;
+}
+
+.Equipe{
+    gap: 50px;
+}
+
+.EquipeSteam{
+    /*margin-top: 100px;*/
+    background: #a2d1ec;
+    padding: 50px;
+}
+
+.Professores{
+    background: #ccb5fa;
+    padding: 50px;
+}
+
+
+                    /*Lucas*/
+
+.lucas {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.lucas::before,
+.lucas::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #906adc;
+    transition: all 0.5s;
+}
+
+.lucas::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.lucas::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.lucas:hover::before,
+.lucas:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.lucas:hover:after {
+    content: "Aluno: Lucas Augusto";
+}
+
+.lucas img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+                        /*Gabriel*/
+
+.gabriel {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #d1cece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.gabriel::before,
+.gabriel::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #906adc;
+    transition: all 0.5s;
+}
+
+.gabriel::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.gabriel::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.gabriel:hover::before,
+.gabriel:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.gabriel:hover:after {
+    content: "Aluno: Gabriel Rodrigues";
+}
+
+.gabriel img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+                    /*Bruno*/
+
+.bruno {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.bruno::before,
+.bruno::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #bab9b9;
+    transition: all 0.5s;
+}
+
+.bruno::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.bruno::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.bruno:hover::before,
+.bruno:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.bruno:hover:after {
+    content: "Professor: Bruno Jesus";
+}
+
+.bruno img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+                        /*Sidnei*/
+
+.sidnei {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.sidnei::before,
+.sidnei::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #bab9b9;
+    transition: all 0.5s;
+}
+
+.sidnei::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.sidnei::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.sidnei:hover::before,
+.sidnei:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.sidnei:hover:after {
+    content: "Professor: Sidnei Dourado";
+}
+
+.sidnei img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+
+                                            /*Equipe Steam*/
+
+/*Italo*/
+
+.italo {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.italo::before,
+.italo::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.italo::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.italo::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.italo:hover::before,
+.italo:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.italo:hover:after {
+    content: "Aluno: Italo Daniel";
+}
+
+.italo img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Isadora*/
+
+.isadora {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #d1cece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.isadora::before,
+.isadora::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.isadora::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.isadora::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.isadora:hover::before,
+.isadora:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.isadora:hover:after {
+    content: "Aluna: Isadora";
+}
+
+.isadora img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Fabiana - Professora*/
+
+.fabi {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.fabi::before,
+.fabi::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #bab9b9;
+    transition: all 0.5s;
+}
+
+.fabi::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.fabi::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.fabi:hover::before,
+.fabi:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.fabi:hover:after {
+    content: "Professora: Fabiana Guiaro";
+}
+
+.fabi img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Julia*/
+
+.julia {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.julia::before,
+.julia::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.julia::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.julia::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.julia:hover::before,
+.julia:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.julia:hover:after {
+    content: "Aluna: Julia";
+}
+
+.julia img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Isis*/
+
+.isis {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.isis::before,
+.isis::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.isis::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.isis::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.isis:hover::before,
+.isis:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.isis:hover:after {
+    content: "Aluna: Isis";
+}
+
+.isis img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Guilherme*/
+
+.guilherme {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.guilherme::before,
+.guilherme::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.guilherme::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.guilherme::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.guilherme:hover::before,
+.guilherme:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.guilherme:hover:after {
+    content: "Aluno: Guilherme";
+}
+
+.guilherme img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Hyago*/
+
+.hyago {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hyago::before,
+.hyago::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.hyago::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.hyago::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.hyago:hover::before,
+.hyago:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.hyago:hover:after {
+    content: "Aluno: Hyago";
+}
+
+.hyago img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+/*Maria*/
+
+.maria {
+    position: relative;
+    width: 370px;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.maria::before,
+.maria::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #72e166;
+    transition: all 0.5s;
+}
+
+.maria::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.maria::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.maria:hover::before,
+.maria:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.maria:hover:after {
+    content: "Aluna: Maria Clara";
+}
+
+.maria img{
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+
+                                            /*Aplicativos*/
+
+.img-logo img {
+    width: 200px;
+    height: 200px;
+}
+
+.cont-app1 {
+    background-color: #5c6aa1;
+    padding: 50px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.TituloAplicativos, .cont-app1 {
+    margin-top: 70px;
+    padding: 50px;
+    background-color: #5c6aa1;
+}
+
+.TituloAplicativos h2{
+    font-size: 40px;
+    color: white;
+}
+
+.cont-app2 {
+    background-color: #5c6aa1;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    /*margin-top: 20px;*/
+}
+
+
+
+
+.whats {
+    background-image: url("/static/img/fundo_whats.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /*background: linear-gradient(#ffffff, #ffffff) padding-box,*/
+linear-gradient(225deg, transparent 35%, #741a88, #00ff00) border-box;
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.insta {
+    background-image: url("/static/img/fundo_insta.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /*background: linear-gradient(#ffffff, #ffffff) padding-box,*/
+    /*linear-gradient(225deg, transparent 35%, #e6a031, #741a88) border-box;*/
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.face {
+    background-image: url("/static/img/fundo_face.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /*background: linear-gradient(#ffffff, #ffffff) padding-box,*/
+    /*linear-gradient(225deg, transparent 35%, #e6a031, #741a88) border-box;*/
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.config {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(#c8c8c8, #757575) padding-box,
+    linear-gradient(225deg, transparent 35%, #e6a031, #741a88) border-box;
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+
+.google {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(295deg, transparent 35%, #e6a031, #741a88) border-box;
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+
+.banco {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(rgba(255, 245, 0, 0.6), rgba(255, 222, 0, 0.6)) padding-box,
+    linear-gradient(225deg, transparent 35%, #e6a031, #741a88) border-box;
+    box-shadow: 4px 5px 5px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.btn2 {
+    background-color: #741a88;
+}
+
+
+
+.testemunhas {
+    margin-top: 80px;
+}
+
+/* From Uiverse.io by Yaya12085 */
+.card {
+    background-color: rgba(243, 244, 246, 1);
+    padding: 2rem;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+}
+
+.cont1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    gap: 1rem;
+}
+
+.header .image {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    background-color: royalblue;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    grid-gap: 0.125rem;
+    gap: 0.125rem;
+    color: rgba(34, 197, 94, 1);
+}
+
+.stars svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.name {
+    margin-top: 0.25rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, 1);
+}
+
+.message {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-top: 1rem;
+    color: rgba(107, 114, 128, 1);
+}
+
+footer{
+    padding: 5rem 0;
+}
+
+footer p{
+    font-size: 1.70rem;
+}
+
+footer li a {
+    font-size: 1.30rem;
+}
+
+
+/*Avaliação*/
+
+.TituloAvaliacao {
+    margin-top: 40px;
+}
+
+.TituloAvaliacao h2{
+    font-size: 40px;
+}
+
+.flecha2{
+    display: flex;
+    margin-top: 140px;
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+}
+
+.card-cor1 {
+    background-color: rgba(149, 208, 228, 0.36);
+}
+
+.card-cor2 {
+    background-color: rgb(185, 237, 180);
+}
+
+.card-cor3 {
+    background-color: rgba(204, 139, 115, 0.34);
+}
+
+@media (max-width: 768px) {
+
+    .whats {
+        margin-bottom: 80px;
+    }
+
+    .insta {
+        margin-bottom: 80px;
+    }
+
+    .Sobre{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .card{
+        margin-top: 50px;
+    }
+
+    .Banners img{
+        height: 400px;
+    }
+
+}
