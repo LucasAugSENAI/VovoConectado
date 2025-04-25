@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vovô Conectado</title>
+    <link rel="stylesheet" href="static/css/estiloIndex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/estiloIndex.css">
+    <link rel="icon" href="static/img/VovoLogo.png" type="image/png">
+    <!--- Icones --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+</head>
+<body class="bg-light container-fluid">
+<header class="d-flex align-items-center justify-content-between">
+
+    <div>
+        <a href="index.html"><img src="static/img/VovoLogo.png" alt="logo vovo" class="logo"></a>
+    </div>
+
+    <div class="menus">
+        <ul class="nav justify-content-center align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Aplicativos">Aplicativo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Avaliacao">Avalições</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Desenvolvedores">Desenvolvedores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Sobre">Sobre</a>
+            </li>
+            <button type="button" class="btn"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo">
+                <li class="nav-item">
+                    <a class="nav-link">Contato</a>
+                </li>
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header d-flex align-items-center bg-dark">
+                            <i class="bi bi-person fs-3 text-light"></i>
+                            <h1 class="modal-title fs-5 justify-content-center text-light ms-5"
+                                id="exampleModalLabel">Entre em contato conosco</h1>
+                            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Assunto:</label>
+                                    <select class="form-select" id="exampleFormControlSelect1">
+                                        <option selected>Escolha...</option>
+                                        <option>Problema com o site</option>
+                                        <option>Conexão</option>
+                                        <option>Acessibilidade</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Messagem:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar
+                            </button>
+                            <button type="button" class="btn btn-primary">Enviar messagem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <div class="pesquisar">
+        <button class="btn btn-pesquisar bg-success" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span>
+                    <i class="bi bi-search text-light fs-4"></i>
+                </span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header bg-black text-light">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">O que você procura?</h5>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex align-items-center">
+                <div class="select d-flex align-items-center">
+                    <p>Aplicativo</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>WhatsApp</option>
+                        <option selected>Instagram</option>
+                        <option selected>Facebook</option>
+                        <option selected>Configurações</option>
+                        <option selected>Banco do Brasil</option>
+                        <option selected>Google</option>
+                    </select>
+                </div>
+
+                <div class="select d-flex align-items-center">
+                    <p>Conteúdo</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Tutorial</option>
+                        <option selected>Expliação</option>
+                    </select>
+                </div>
+
+                <p class="text-center">Ou</p>
+
+                <div class="input-group mb-3 barraPesquisa">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control" placeholder="pesquise..." aria-label="Username"
+                           aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<section class="Banners">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-dark"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="bg-dark"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="bg-dark"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/img/Banner1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="static/img/Banner2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="static/img/Banner3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="TituloSobre" id="Sobre">
+    <h1 class="text-center">Sobre nós</h1>
+</section>
+
+<section class="Sobre d-flex row">
+
+    <div class="sobre d-flex align-items-center col-4">
+        <div class="card-header-c d-flex">
+            <div class="card-box-ico d-flex align-items-center">
+                <i class="bi bi-file-earmark-person-fill fs-1"></i>
+            </div>
+            <div class="card-title-c align-self-center position-absolute">
+                <h2 class="title-c">Sobre</h2>
+            </div>
+        </div>
+        <!--            <div class="sobrenos z-0 position-absolute p-2 rounded-2">-->
+        <!--                <i class="bi bi-file-earmark-person-fill fs-1"></i><p class="z-1 position-absolute">Sobre</p>-->
+        <!--            </div>-->
+        <div class="sobreTextos d-flex align-items-center">
+            <p class="justificado">Nossa proposta inicial foi elaborada de acordo com as ideias que a professora nos
+                passou, falando sobre a
+                dificuldade de acesso a internet em alguns meios e pessoas, percebemos que vários idosos possuem
+                dificuldades para acessar e muitas vezes acabam caindo em golpes, perdendo dinheiro e informando
+                documentos importantes.</p>
+            <button type="button" class="btn ler mais" data-bs-toggle="modal" data-bs-target="#staticBackdropSobre">
+                ler mais <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdropSobre" data-bs-backdrop="static" data-bs-keyboard="false"
+                 tabindex="-1"
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Sobre</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            A ideia surgiu a partir de uma preocupação real: muitos idosos enfrentam dificuldades para
+                            acessar a internet, entender aplicativos e, infelizmente, acabam sendo vítimas de golpes
+                            virtuais.
+
+                            Percebemos que a tecnologia pode — e deve — ser uma aliada em todas as fases da vida. Por
+                            isso, criamos este espaço dedicado a tornar o uso da tecnologia mais acessível para quem não
+                            cresceu com ela. Aqui, oferecemos orientações passo a passo, dicas práticas, e informações
+                            úteis para que cada idoso possa navegar com confiança e segurança.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre d-flex align-items-center col-4">
+        <div class="card-header-c d-flex">
+            <div class="card-box-ico d-flex align-items-center">
+                <i class="bi bi-person-fill-gear fs-1"></i>
+            </div>
+            <div class="card-title-c align-self-center position-absolute">
+                <h2 class="title-c">Objetivo</h2>
+            </div>
+        </div>
+        <!--            <div class="sobrenos z-0 position-absolute p-2 rounded-2">-->
+        <!--                <i class="bi bi-file-earmark-person-fill fs-1"></i><p class="z-1 position-absolute">Sobre</p>-->
+        <!--            </div>-->
+        <div class="sobreTextos d-flex align-items-center">
+            <p class="justificado">O nosso objetivo é ensinar os idosos a não ter dificuldades, ensinando os passos
+                básicos e ensinando os
+                passos confiáveis para não caírem mais em golpes.</p>
+            <button type="button" class="btn ler mais" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                ler mais <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                 tabindex="-1"
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel2">Objetivo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Nosso objetivo é ensinar os idosos a utilizar a tecnologia de forma simples, segura e
+                            eficiente. Queremos eliminar as dificuldades que muitos enfrentam ao lidar com celulares,
+                            computadores e a internet, oferecendo orientações básicas e práticas. Além disso, buscamos
+                            conscientizar e preparar nossos usuários para reconhecer situações de risco e evitar golpes
+                            virtuais, promovendo mais autonomia, confiança e segurança no mundo digital.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre d-flex align-items-center col-4">
+        <div class="card-header-c d-flex">
+            <div class="card-box-ico d-flex align-items-center">
+                <i class="bi bi-eye-fill fs-1"></i>
+            </div>
+            <div class="card-title-c align-self-center position-absolute">
+                <h2 class="title-c">Visão</h2>
+            </div>
+        </div>
+        <!--            <div class="sobrenos z-0 position-absolute p-2 rounded-2">-->
+        <!--                <i class="bi bi-file-earmark-person-fill fs-1"></i><p class="z-1 position-absolute">Sobre</p>-->
+        <!--            </div>-->
+        <div class="sobreTextos d-flex align-items-center">
+            <p class="justificado">Ser uma referência no apoio à inclusão digital de idosos, promovendo um ambiente onde
+                a tecnologia seja uma ferramenta de liberdade, segurança e independência. Acreditamos em um futuro onde
+                todos, independentemente da idade, possam navegar com confiança e fazer parte do mundo digital de forma
+                ativa e protegida.</p>
+            <button type="button" class="btn lermais" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                ler mais <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                 tabindex="-1"
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel3">Visão</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Sonhamos com um mundo em que a idade não seja uma barreira para o acesso à tecnologia.
+                            Queremos ser uma referência nacional no apoio à inclusão digital de idosos, promovendo um
+                            ambiente acolhedor, educativo e seguro. Acreditamos que todos, independentemente da geração
+                            a que pertencem, têm o direito de entender, utilizar e se beneficiar das facilidades que o
+                            mundo digital oferece.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Aplicativos-->
+
+
+<section class="TituloAplicativos text-center" id="Aplicativos">
+    <h2>Aplicativos</h2>
+
+    <section class="cont-app1 row">
+
+
+        <div class="whats col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_whats.png" alt="logo whatszapp">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-success fs-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExample" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        WhatsApp
+                    </button>
+                    <a href="https://youtu.be/ytaXrr9HLJI?si=Cw3CR7YKTfcmHBpl" target="_blank">
+                        <button class="btn btn-success fs-5">Tutorial</button>
+                    </a>
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                        <div class="card card-body fs-5" style="width: 600px;">
+                            O WhatsApp é um aplicativo gratuito que permite conversar com outras pessoas usando a
+                            internet.
+                            Com ele, é possível enviar mensagens de texto, fazer chamadas de voz e vídeo, mandar fotos,
+                            vídeos e até áudios.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="insta col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_insta.png" alt="logo instagram">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-light fs-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExamplee" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        Instagram
+                    </button>
+                    <a href="https://youtu.be/wxKLLmCX_Bw?si=atT59dp1X2w6P68j" target="_blank">
+                        <button class="btn btn-light fs-5">Tutorial</button>
+                    </a>
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExamplee">
+                        <div class="card  fs-5" style="width: 600px;">
+                            O Instagram é um aplicativo que serve para ver e compartilhar fotos e vídeos. Muitas pessoas
+                            usam o Instagram para mostrar momentos do dia a dia, viagens, receitas, plantas, bichinhos
+                            de
+                            estimação e muito mais.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="face col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_face.png" alt="logo Facebook">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-primary fs-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExampleee" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        Facebook
+                    </button>
+                    <a href="https://youtu.be/BszYeoeiHF0?si=PwzEUZ3Ql46jQRM4" target="_blank">
+                        <button class="btn btn-primary fs-5">Tutorial</button>
+                    </a>
+
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExampleee">
+                        <div class="card card-body fs-5" style="width: 600px;">
+                            O Facebook é um aplicativo onde você pode se conectar com amigos, familiares e outras
+                            pessoas do mundo todo. Nele, é possível compartilhar mensagens, fotos, vídeos e lembranças.
+                            Você pode ver o que as outras pessoas estão postando e curtindo.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="cont-app2 row">
+
+        <div class="config col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_config.png" alt="logo config">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-success fs-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExample1" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        Config do celular
+                    </button>
+                    <a href="https://youtu.be/pTJDw66pm5U?si=1exCXuGoI1NtnBQZ" target="_blank">
+                        <button class="btn btn-success fs-5">Tutorial</button>
+                    </a>
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+                        <div class="card card-body fs-5" style="width: 600px;">
+                            As configurações do celular servem para personalizar e controlar o funcionamento do
+                            aparelho.
+                            Nessa área, é possível ajustar o som, o brilho da tela, a conexão com a internet (Wi-Fi e
+                            dados
+                            móveis), ativar o Bluetooth, gerenciar aplicativos, configurar senhas, idioma, privacidade e
+                            muito mais. Também é por lá que se fazem atualizações do sistema e redefinições do celular.
+                            As
+                            configurações ajudam a deixar o celular do jeito que o usuário prefere e mais seguro.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="google col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_google.png" alt="logo Google">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-light fs-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExamplee2" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        Google
+                    </button>
+                    <a href="https://youtu.be/BpAE_d9Ogwc?si=UqFhZgE8gY9nyRyP" target="_blank">
+                        <button class="btn btn-light fs-5">Tutorial</button>
+                    </a>
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExamplee2">
+                        <div class="card card-body fs-5" style="width: 600px;">
+                            O Google é uma ferramenta que serve para buscar informações na internet. Com ele, você pode
+                            pesquisar sobre qualquer assunto, encontrar sites, imagens, vídeos, mapas e notícias. Além
+                            disso, o Google oferece serviços como e-mail (Gmail), armazenamento de arquivos (Google
+                            Drive),
+                            tradutor, agenda, navegador (Google Chrome) e muito mais. Ele facilita o acesso rápido e
+                            organizado a informações e serviços do dia a dia.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="banco col-lg-3 col-md-6 col-sm-12">
+            <div class="img-logo">
+                <img src="static/img/logo_banco.png" alt="logo Banco">
+            </div>
+
+            <div class="collapsee">
+
+                <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExampleee3" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                        Banco do Brasil
+                    </button>
+                    <a href="https://youtu.be/Z-_9W_6G8EE?si=MIHX2L4T9dxURyIr" target="_blank">
+                        <button class="btn btn-primary">Tutorial</button>
+                    </a>
+
+                </p>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExampleee3">
+                        <div class="card card-body fs-5" style="width: 600px;">
+                            O Banco do Brasil serve para ajudar pessoas e empresas a cuidar do dinheiro. Ele permite
+                            guardar
+                            dinheiro com segurança, fazer pagamentos, transferências, saques, receber salários, pedir
+                            empréstimos e investir. Também oferece serviços como seguros, cartões e financiamentos. Tudo
+                            isso facilita o dia a dia financeiro dos clientes.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+<section class="TituloAvaliacao text-center" id="Avaliacao">
+    <h2>Avaliações</h2>
+
+    <section class="testemunhas">
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cont1 row">
+                        <div class="card card-cor1 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Bruno Otávio</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A proposta é ótima, mas o site é um pouco carregado visualmente. Pode confundir usuários
+                                iniciantes. Seria bom ter uma versão mais "leve" com um caminho mais guiado.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor1 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Gabriel Rodrigues</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                O site oferece uma navegação simples e intuitiva, com menus bem organizados e linguagem
+                                acessível. Os botões são grandes e fáceis de clicar, o que é ideal para pessoas com
+                                menos
+                                familiaridade com tecnologia. Poderia melhorar ao adicionar uma opção de modo
+                                simplificado
+                                para quem tem mais dificuldades.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor1 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Lucas Augusto</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A navegação é muito bem pensada, com passos numerados e menus simples. Há poucos
+                                elementos
+                                na tela, o que evita confusão. No entanto, faltou uma busca interna mais fácil de usar,
+                                o
+                                que dificultaria encontrar temas específicos rapidamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cont1 row">
+                        <div class="card card-cor2 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Heitor</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A proposta é ótima, mas o site é um pouco carregado visualmente. Pode confundir usuários
+                                iniciantes. Seria bom ter uma versão mais "leve" com um caminho mais guiado.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor2 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Pedro</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                O site oferece uma navegação simples e intuitiva, com menus bem organizados e linguagem
+                                acessível. Os botões são grandes e fáceis de clicar, o que é ideal para pessoas com
+                                menos
+                                familiaridade com tecnologia. Poderia melhorar ao adicionar uma opção de modo
+                                simplificado
+                                para quem tem mais dificuldades.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor2 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Lara Almeida</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A navegação é muito bem pensada, com passos numerados e menus simples. Há poucos
+                                elementos
+                                na tela, o que evita confusão. No entanto, faltou uma busca interna mais fácil de usar,
+                                o
+                                que dificultaria encontrar temas específicos rapidamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cont1 row">
+                        <div class="card card-cor3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Luan</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A proposta é ótima, mas o site é um pouco carregado visualmente. Pode confundir usuários
+                                iniciantes. Seria bom ter uma versão mais "leve" com um caminho mais guiado.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Eduardo</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                O site oferece uma navegação simples e intuitiva, com menus bem organizados e linguagem
+                                acessível. Os botões são grandes e fáceis de clicar, o que é ideal para pessoas com
+                                menos
+                                familiaridade com tecnologia. Poderia melhorar ao adicionar uma opção de modo
+                                simplificado
+                                para quem tem mais dificuldades.
+                            </p>
+                        </div>
+
+                        <!-- From Uiverse.io by Yaya12085 -->
+                        <div class="card card-cor3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="header">
+                                <div class="image"></div>
+                                <div>
+                                    <div class="stars">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="name">Thiago</p>
+                                </div>
+                            </div>
+
+                            <p class="message">
+                                A navegação é muito bem pensada, com passos numerados e menus simples. Há poucos
+                                elementos
+                                na tela, o que evita confusão. No entanto, faltou uma busca interna mais fácil de usar,
+                                o
+                                que dificultaria encontrar temas específicos rapidamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev bg-dark flecha2" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next bg-dark flecha2" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="NossaEquipe" id="Desenvolvedores">
+        <div class="Equipe container-fluid d-flex justify-content-center align-items-center row">
+
+            <div class="Equipe-titulo text-center">
+                <h1>Desenvolvedores</h1>
+            </div>
+
+            <div class="lucas col-1">
+
+                <img src="static/img/Lucas.jpg">
+
+            </div>
+
+            <div class="gabriel col-1">
+
+                <img src="static/img/GabrielRodrigues.jpg">
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="EquipeSteam">
+        <div class="Equipe container-fluid d-flex justify-content-center align-items-center row">
+
+            <div class="Equipe-titulo text-center">
+                <h1>Equipe Steam</h1>
+            </div>
+
+            <div class="italo col-1">
+
+                <img src="static/img/userman.png">
+
+            </div>
+
+            <div class="isadora col-1">
+
+                <img src="static/img/userwoman.png">
+
+            </div>
+
+            <div class="julia col-1">
+
+                <img src="static/img/userwoman.png">
+
+            </div>
+
+            <div class="isis col-1">
+
+                <img src="static/img/userwoman.png">
+
+            </div>
+
+            <div class="guilherme col-1">
+
+                <img src="static/img/userman.png">
+
+            </div>
+
+            <div class="hyago col-1">
+
+                <img src="static/img/userman.png">
+
+            </div>
+
+            <div class="maria col-1">
+
+                <img src="static/img/userwoman.png">
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="Professores">
+        <div class="Equipe container-fluid d-flex justify-content-center align-items-center row">
+
+            <div class="Equipe-titulo text-center">
+                <h1>Professores</h1>
+            </div>
+
+            <div class="fabi col-1">
+
+                <img src="static/img/Fabiana.png">
+
+            </div>
+
+            <div class="sidnei col-1">
+
+                <img src="static/img/SidneiDourado.jpeg">
+
+            </div>
+
+            <div class="bruno col-1">
+
+                <img src="static/img/BrunoTorrezan.png">
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="d-flex align-items-center justify-content-center text-light bg-dark">
+        <div class="text-center">
+            <p>&copy; 2024 Vovo Conectado. Todos os direitos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-light">Privacidade</a></li>
+                <li class="list-inline-item"><a href="#" class="text-light">Termos</a></li>
+                <li class="list-inline-item"><a href="#" class="text-light">Contato</a></li>
+            </ul>
+            <div class="iconsRedes gap-5 d-flex justify-content-evenly align-items-center'">
+                <div><a href="#" class="text-black me-2"><i class="bi bi-facebook fs-1 text-light"></i></a></div>
+                <div><a href="#" class="text-black me-2"><i class="bi bi-twitter fs-1 text-light"></i></a></div>
+                <div><a href="#" class="text-black"><i class="bi bi-instagram fs-1 text-light"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+</html>
